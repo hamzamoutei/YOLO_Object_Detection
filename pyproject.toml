@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yolo-object-detection"
+version = "1.0.0"
+description = "Real-time object detection with YOLO and OpenCV"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["ultralytics>=8.3.0", "opencv-python>=4.8.0"]
+
+[project.scripts]
+yolo-object-detection = "object_detection.detector:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
